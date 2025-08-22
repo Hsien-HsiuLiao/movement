@@ -18,3 +18,8 @@ warning: `movement` (lib) generated 1 warning
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 11m 54s
 
 sudo cp target/debug/movement /usr/local/bin/
+
+https://docs.movementnetwork.xyz/devs/networkEndpoints
+
+RPC	https://full.testnet.movementinfra.xyz/v1
+Faucet endpoint	https://faucet.testnet.movementinfra.xyz/
