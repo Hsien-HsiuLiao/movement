@@ -1,0 +1,59 @@
+# Gitpod configuration for Move development with Aptos
+tasks:
+  - name: Setup Move Development Environment
+    init: |
+      # Install Rust (required for Move)
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      source $HOME/.cargo/env
+      
+      # Install Move CLI
+      cargo install --git https://github.com/move-language/move move-cli --branch main
+      
+      # Install Aptos CLI
+      curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
+      
+      # Add to PATH
+      echo 'export PATH="$HOME/.local/bin:$PATH"' >> $HOME/.bashrc
+      source $HOME/.bashrc
+      
+      # Verify installations
+      move --version
+      aptos --version
+      
+      # Navigate to Move project directory
+      cd my-onchain-bio/move
+      
+      # Show project structure
+      echo "=== Project Structure ==="
+      ls -la
+      echo ""
+      echo "=== Move.toml Contents ==="
+      cat Move.toml
+      echo ""
+      echo "=== Move Source Files ==="
+      ls -la sources/
+      
+    command: |
+      echo "🎉 Move development environment is ready!"
+      echo "📁 You're now in the Move project directory: $(pwd)"
+      echo ""
+      echo "🚀 Available commands:"
+      echo "  - move build          # Build your Move project"
+      echo "  - move test           # Run tests"
+      echo "  - aptos init          # Initialize Aptos account"
+      echo "  - aptos move compile  # Compile with Aptos CLI"
+      echo ""
+      echo "💡 Start by running: move build"
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - move.move-analyzer
+    - ms-vscode.vscode-json
+    - ms-vscode.vscode-toml
+    - rust-lang.rust-analyzer
+
+workspaceLocation: "my-onchain-bio/move" 
