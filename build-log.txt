@@ -1,0 +1,705 @@
+movement/my-onchain-bio/move (main) $ movement move build
+Compiling, may take a little while to download git dependencies...
+FETCHING GIT DEPENDENCY https://github.com/aptos-labs/aptos-core.git
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING my_todo_list
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/single_key.move:51:5
+   │
+51 │     enum AnyPublicKey has copy, drop, store {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/single_key.move:98:9
+   │
+98 │         match (pk) {
+   │         ^^^^^ Move 2 language construct is not enabled: match expression
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/single_key.move:99:37
+   │
+99 │             AnyPublicKey::Keyless { .. } => true,
+   │                                     ^^
+   │                                     │
+   │                                     Unexpected '..'
+   │                                     Expected an identifier
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/delegation_pool.move:356:5
+    │
+356 │     enum DelegationPermission has copy, drop, store {
+    │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/bcs_stream.move:51:25
+   │
+51 │             stream.cur += 1;
+   │                         ^
+   │                         │
+   │                         Unexpected '='
+   │                         Expected an expression term
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/permissioned_signer.move:71:5
+   │
+71 │     enum PermissionedHandle {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/permissioned_signer.move:84:5
+   │
+84 │     enum StorablePermissionedHandle has store {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/permissioned_signer.move:99:5
+   │
+99 │     enum PermissionStorage has key {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/permissioned_signer.move:108:5
+    │
+108 │     enum StoredPermission has store, copy, drop {
+    │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/permissioned_signer.move:112:17
+    │
+112 │         Capacity(u256),
+    │                 ^
+    │                 │
+    │                 Unexpected '('
+    │                 Expected ','
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/multi_ed25519.move:362:26
+    │
+362 │         *first_sig_byte ^= 0xff;
+    │                          ^
+    │                          │
+    │                          Unexpected '='
+    │                          Expected an expression term
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/../move-stdlib/sources/configs/features.move:834:35
+    │
+834 │             features[byte_index] |= bit_mask
+    │                                   ^
+    │                                   │
+    │                                   Unexpected '='
+    │                                   Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/table_with_length.move:39:22
+   │
+39 │         self.length += 1;
+   │                      ^
+   │                      │
+   │                      Unexpected '='
+   │                      Expected an expression term
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/account.move:231:5
+    │
+231 │     enum AccountPermission has copy, drop, store {
+    │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/../move-stdlib/sources/bit_vector.move:33:22
+   │
+33 │             counter += 1;
+   │                      ^
+   │                      │
+   │                      Unexpected '='
+   │                      Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/tests/smart_vector_test.move:12:16
+   │
+12 │             i += 1;
+   │                ^
+   │                │
+   │                Unexpected '='
+   │                Expected an expression term
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/bls12381.move:300:22
+    │
+300 │         *first_byte ^= 0xff;
+    │                      ^
+    │                      │
+    │                      Unexpected '='
+    │                      Expected an expression term
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/storage_slots_allocator.move:31:5
+   │
+31 │     enum Link<T: store> has store {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/storage_slots_allocator.move:43:5
+   │
+43 │     enum StorageSlotsAllocator<T: store> has store {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/storage_slots_allocator.move:112:9
+    │
+112 │         match (self) {
+    │         ^^^^^ Move 2 language construct is not enabled: match expression
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/storage_slots_allocator.move:198:37
+    │
+198 │             self.reuse_spare_count -= 1;
+    │                                     ^
+    │                                     │
+    │                                     Unexpected '='
+    │                                     Expected an expression term
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/fixed_point64.move:440:23
+    │
+440 │                 mult *= n;
+    │                       ^
+    │                       │
+    │                       Unexpected '='
+    │                       Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/keyless.move:73:12
+   │
+73 │     friend fun get_iss(self: &PublicKey): String {
+   │            ^^^
+   │            │
+   │            Unexpected 'fun'
+   │            Expected a friend declaration
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/comparator.move:52:18
+   │
+52 │             idx += 1;
+   │                  ^
+   │                  │
+   │                  Unexpected '='
+   │                  Expected an expression term
+
+error[E01013]: unsupported language construct
+  ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/auth_data.move:7:5
+  │
+7 │     enum AbstractionAuthData has copy, drop {
+  │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/auth_data.move:41:22
+   │
+41 │         assert!(self is V1, error::invalid_argument(ENOT_REGULAR_AUTH_DATA));
+   │                -     ^ Expected ')'
+   │                │      
+   │                To match this '('
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/account_abstraction.move:61:5
+   │
+61 │     enum DispatchableAuthenticator has key, copy, drop {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/account_abstraction.move:65:5
+   │
+65 │     enum DerivableRegisterValue has store {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/account_abstraction.move:70:5
+   │
+70 │     enum DerivableDispatchableAuthenticator has key {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/pool_u64_unbound.move:132:27
+    │
+132 │         self.total_coins += coins_amount;
+    │                           ^
+    │                           │
+    │                           Unexpected '='
+    │                           Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/table.move:93:12
+   │
+93 │     friend fun destroy_known_empty_unsafe<K: copy + drop, V>(self: Table<K, V>) {
+   │            ^^^
+   │            │
+   │            Unexpected 'fun'
+   │            Expected a friend declaration
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/common_account_abstractions/solana_derivable_account.move:52:5
+   │
+52 │     enum SIWSAbstractSignature has drop {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/common_account_abstractions/solana_derivable_account.move:138:48
+    │
+138 │                 bytes.push_back((carry & 0xff) as u8);
+    │                                -               ^ Expected ')'
+    │                                │                
+    │                                To match this '('
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/math_fixed64.move:72:16
+   │
+72 │         power -= ((power * eps_correction * exponent) >> 128);
+   │                ^
+   │                │
+   │                Unexpected '='
+   │                Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/from_bcs.move:69:12
+   │
+69 │     native friend fun from_bytes<T>(bytes: vector<u8>): T;
+   │            ^^^^^^
+   │            │
+   │            Unexpected 'friend'
+   │            Expected a module member: 'spec', 'use', 'friend', 'const', 'fun', 'inline', or 'struct'
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/type_info.move:292:16
+    │
+292 │             i += 1; // Increment counter.
+    │                ^
+    │                │
+    │                Unexpected '='
+    │                Expected an expression term
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/ristretto255.move:813:16
+    │
+813 │             c -= 1;
+    │                ^
+    │                │
+    │                Unexpected '='
+    │                Expected an expression term
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/permissioned_delegation.move:29:5
+   │
+29 │     enum AccountDelegation has store {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/permissioned_delegation.move:33:5
+   │
+33 │     enum DelegationKey has copy, store, drop {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/permissioned_delegation.move:34:25
+   │
+34 │         Ed25519PublicKey(UnvalidatedPublicKey)
+   │                         ^
+   │                         │
+   │                         Unexpected '('
+   │                         Expected ','
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/bls12381_algebra.move:258:18
+    │
+258 │             num -= 1;
+    │                  ^
+    │                  │
+    │                  Unexpected '='
+    │                  Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/smart_table.move:93:34
+   │
+93 │             num_initial_buckets -= 1;
+   │                                  ^
+   │                                  │
+   │                                  Unexpected '='
+   │                                  Expected an expression term
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.move:50:5
+   │
+50 │     enum OrderedMap<K, V> has drop, copy, store {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.move:61:5
+   │
+61 │     enum IteratorPtr has copy, drop {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.move:241:28
+    │
+241 │                     cur_i -= 1;
+    │                            ^
+    │                            │
+    │                            Unexpected '='
+    │                            Expected an expression term
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/pool_u64.move:141:27
+    │
+141 │         self.total_coins += coins_amount;
+    │                           ^
+    │                           │
+    │                           Unexpected '='
+    │                           Expected an expression term
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/bn254_algebra.move:241:18
+    │
+241 │             num -= 1;
+    │                  ^
+    │                  │
+    │                  Unexpected '='
+    │                  Expected an expression term
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:171:63
+    │
+171 │         std::cmp::compare(result_1, k) == std::cmp::Ordering::Less;
+    │                                                               ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:180:63
+    │
+180 │         std::cmp::compare(result_1, k) == std::cmp::Ordering::Greater;
+    │                                                               ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:198:71
+    │
+198 │         && k != key: std::cmp::compare(key, k) == std::cmp::Ordering::Less);
+    │                                                                       ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:201:89
+    │
+201 │             (std::cmp::compare(option::spec_borrow(result), key) == std::cmp::Ordering::Less)
+    │                                                                                         ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:203:62
+    │
+203 │             std::cmp::compare(k, key) == std::cmp::Ordering::Less)) ==>
+    │                                                              ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:204:86
+    │
+204 │             std::cmp::compare(option::spec_borrow(result), k) == std::cmp::Ordering::Greater);
+    │                                                                                      ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:213:58
+    │
+213 │         std::cmp::compare(key, k) == std::cmp::Ordering::Greater);
+    │                                                          ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:216:89
+    │
+216 │             (std::cmp::compare(option::spec_borrow(result), key) == std::cmp::Ordering::Greater)
+    │                                                                                         ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:218:62
+    │
+218 │             std::cmp::compare(k, key) == std::cmp::Ordering::Greater)) ==>
+    │                                                              ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.spec.move:219:86
+    │
+219 │             std::cmp::compare(option::spec_borrow(result), k) == std::cmp::Ordering::Less);
+    │                                                                                      ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/../move-stdlib/sources/fixed_point32.move:43:17
+   │
+43 │         product as u64
+   │                 ^^
+   │                 │
+   │                 Unexpected 'as'
+   │                 Expected ';'
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/fungible_asset.move:214:5
+    │
+214 │     enum WithdrawPermission has copy, drop, store {
+    │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/fungible_asset.move:896:77
+    │
+896 │         assert!(permissioned_signer::check_permission_consume(owner, amount as u256, WithdrawPermission::ByStore {
+    │                                                              -              ^ Expected ')'
+    │                                                              │               
+    │                                                              To match this '('
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/tests/smart_table_test.move:19:16
+   │
+19 │             s += *x + *y;
+   │                ^
+   │                │
+   │                Unexpected '='
+   │                Expected an expression term
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/aptos_governance.move:574:29
+    │
+574 │         *used_voting_power += voting_power;
+    │                             ^
+    │                             │
+    │                             Unexpected '='
+    │                             Expected an expression term
+
+error[E01013]: unsupported language construct
+  ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/../move-stdlib/sources/cmp.move:2:5
+  │
+2 │     enum Ordering has copy, drop {
+  │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/../move-stdlib/sources/cmp.move:20:14
+   │
+20 │         self is Ordering::Equal
+   │              ^^
+   │              │
+   │              Unexpected 'is'
+   │              Expected ';'
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/math_fixed.move:71:16
+   │
+71 │         power += ((power * eps_correction * exponent) >> 64);
+   │                ^
+   │                │
+   │                Unexpected '='
+   │                Expected an expression term
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/common_account_abstractions/ethereum_derivable_account.move:51:5
+   │
+51 │     enum SIWEAbstractSignature has drop {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/common_account_abstractions/ethereum_derivable_account.move:265:41
+    │
+265 │         assert!(siwe_abstract_signature is SIWEAbstractSignature::MessageV2);
+    │                -                        ^ Expected ')'
+    │                │                         
+    │                To match this '('
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.move:115:5
+    │
+115 │     enum Node<K: store, V: store> has store {
+    │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.move:131:5
+    │
+131 │     enum Child<V: store> has store {
+    │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.move:145:5
+    │
+145 │     enum IteratorPtr<K> has copy, drop {
+    │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.move:161:5
+    │
+161 │     enum BigOrderedMap<K: store, V: store> has store {
+    │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/big_ordered_map.move:217:121
+    │
+217 │         let inner_max_degree_from_avg = max(min(MAX_DEGREE, DEFAULT_TARGET_NODE_SIZE / avg_key_bytes), INNER_MIN_DEGREE as u64);
+    │                                            -                                                                            ^ Expected ')'
+    │                                            │                                                                             
+    │                                            To match this '('
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/smart_vector.move:125:16
+    │
+125 │             i += 1;
+    │                ^
+    │                │
+    │                Unexpected '='
+    │                Expected an expression term
+
+error[E01013]: unsupported language construct
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/transaction_validation.move:33:5
+   │
+33 │     enum ReplayProtector {
+   │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/transaction_validation.move:34:14
+   │
+34 │         Nonce(u64),
+   │              ^
+   │              │
+   │              Unexpected '('
+   │              Expected ','
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/crypto_algebra.move:301:16
+    │
+301 │             i += 1;
+    │                ^
+    │                │
+    │                Unexpected '='
+    │                Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/math128.move:71:24
+   │
+71 │                     p *= n;
+   │                        ^
+   │                        │
+   │                        Unexpected '='
+   │                        Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/federated_keyless.move:57:12
+   │
+57 │     friend fun get_jwk_address(self: &PublicKey): address {
+   │            ^^^
+   │            │
+   │            Unexpected 'fun'
+   │            Expected a friend declaration
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:208:63
+    │
+208 │         std::cmp::compare(result_1, k) == std::cmp::Ordering::Less;
+    │                                                               ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:217:63
+    │
+217 │         std::cmp::compare(result_1, k) == std::cmp::Ordering::Greater;
+    │                                                               ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:235:71
+    │
+235 │         && k != key: std::cmp::compare(key, k) == std::cmp::Ordering::Less);
+    │                                                                       ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:238:89
+    │
+238 │             (std::cmp::compare(option::spec_borrow(result), key) == std::cmp::Ordering::Less)
+    │                                                                                         ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:240:62
+    │
+240 │             std::cmp::compare(k, key) == std::cmp::Ordering::Less)) ==>
+    │                                                              ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:241:86
+    │
+241 │             std::cmp::compare(option::spec_borrow(result), k) == std::cmp::Ordering::Greater);
+    │                                                                                      ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:250:58
+    │
+250 │         std::cmp::compare(key, k) == std::cmp::Ordering::Greater);
+    │                                                          ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:253:89
+    │
+253 │             (std::cmp::compare(option::spec_borrow(result), key) == std::cmp::Ordering::Greater)
+    │                                                                                         ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:255:62
+    │
+255 │             std::cmp::compare(k, key) == std::cmp::Ordering::Greater)) ==>
+    │                                                              ^^^^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01013]: unsupported language construct
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/datastructures/ordered_map.spec.move:256:86
+    │
+256 │             std::cmp::compare(option::spec_borrow(result), k) == std::cmp::Ordering::Less);
+    │                                                                                      ^^^^ Move 2 language construct is not enabled: fully qualified variant name
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/../move-stdlib/sources/vector.move:113:16
+    │
+113 │         right -= 1;
+    │                ^
+    │                │
+    │                Unexpected '='
+    │                Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/data_structures/big_vector.move:27:12
+   │
+27 │     friend fun empty<T: store>(bucket_size: u64): BigVector<T> {
+   │            ^^^
+   │            │
+   │            Unexpected 'fun'
+   │            Expected a friend declaration
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/math64.move:69:24
+   │
+69 │                     p *= n;
+   │                        ^
+   │                        │
+   │                        Unexpected '='
+   │                        Expected an expression term
+
+error[E01002]: unexpected token
+   ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/../move-stdlib/sources/mem.move:13:12
+   │
+13 │     native friend fun swap<T>(left: &mut T, right: &mut T);
+   │            ^^^^^^
+   │            │
+   │            Unexpected 'friend'
+   │            Expected a module member: 'spec', 'use', 'friend', 'const', 'fun', 'inline', or 'struct'
+
+error[E01002]: unexpected token
+    ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/../aptos-stdlib/sources/cryptography/ristretto255_bulletproofs.move:585:16
+    │
+585 │         *byte += 1;
+    │                ^
+    │                │
+    │                Unexpected '='
+    │                Expected an expression term
+
+error[E01013]: unsupported language construct
+  ┌─ /home/gitpod/.move/https___github_com_aptos-labs_aptos-core_git_mainnet/aptos-move/framework/aptos-framework/sources/account/rate_limiter.move:4:5
+  │
+4 │     enum RateLimiter has key, store, copy, drop {
+  │     ^^^^ Move 2 language construct is not enabled: struct variants
+
+{
+  "Error": "Move compilation failed: Compilation error"
+}
+gitpod /workspace/movement/my-onchain-bio/move (main) $ 
