@@ -1,24 +1,35 @@
-# Gitpod configuration for Move development with Aptos
+# Gitpod configuration for Move development with Movement Network
 tasks:
-  - name: Setup Move Development Environment
+  - name: Setup Movement Development Environment
     init: |
       # Install Rust (required for Move)
       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
       source $HOME/.cargo/env
       
-      # Install Move CLI
-      cargo install --git https://github.com/move-language/move move-cli --branch main
+      # Install prerequisites
+      sudo apt-get update
+      sudo apt-get install -y git cmake libssl-dev libclang-dev
       
-      # Install Aptos CLI
-      curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
+      # Clone Movement core repo and build CLI
+      git clone https://github.com/movementlabsxyz/aptos-core.git
+      cd aptos-core
       
-      # Add to PATH
-      echo 'export PATH="$HOME/.local/bin:$PATH"' >> $HOME/.bashrc
-      source $HOME/.bashrc
+      # Install all prerequisites using automatic script
+      ./scripts/dev_setup.sh
+      source ~/.cargo/env
       
-      # Verify installations
-      move --version
-      aptos --version
+      # Build the Movement CLI tool
+      cargo build -p movement
+      
+      # Move executable to PATH
+      sudo cp target/debug/movement /usr/local/bin/
+      cd ..
+      
+      # Verify Movement CLI installation
+      movement --help
+      
+      # Initialize Movement profile for development
+      movement init --network custom --rest-url https://aptos.testnet.porto.movementlabs.xyz/v1 --faucet-url https://fund.testnet.porto.movementlabs.xyz
       
       # Navigate to Move project directory
       cd my-onchain-bio/move
@@ -34,16 +45,20 @@ tasks:
       ls -la sources/
       
     command: |
-      echo "🎉 Move development environment is ready!"
+      echo "🎉 Movement development environment is ready!"
       echo "📁 You're now in the Move project directory: $(pwd)"
       echo ""
-      echo "🚀 Available commands:"
-      echo "  - move build          # Build your Move project"
-      echo "  - move test           # Run tests"
-      echo "  - aptos init          # Initialize Aptos account"
-      echo "  - aptos move compile  # Compile with Aptos CLI"
+      echo "🚀 Available Movement commands:"
+      echo "  - movement move build    # Build your Move project"
+      echo "  - movement move test     # Run tests"
+      echo "  - movement move publish  # Publish contract to Movement blockchain"
+      echo "  - movement move run      # Call functions on blockchain"
+      echo "  - movement account balance # Check account balance"
       echo ""
-      echo "💡 Start by running: move build"
+      echo "💡 Start by running: movement move build"
+      echo ""
+      echo "🔗 Movement Network: https://aptos.testnet.porto.movementlabs.xyz"
+      echo "💰 Faucet: https://fund.testnet.porto.movementlabs.xyz"
 
 ports:
   - port: 8080
