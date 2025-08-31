@@ -58,11 +58,17 @@ tasks:
       echo "💡 Start by running: movement move build"
       echo ""
       echo "🔗 Movement Network: https://aptos.testnet.porto.movementlabs.xyz"
-      echo "💰 Faucet: https://fund.testnet.porto.movementlabs.xyz"
+      echo "💰 Faucet: https://fund.testnet.porto.movementlabs.xyz
+    openIn: "bottom"
+    openMode: "tab-after"
 
 ports:
   - port: 8080
-    onOpen: open-preview
+    onOpen: "open-preview"
+    visibility: "private"
+    name: "Movement Development Server"
+    description: "Port for Movement blockchain development tools and interfaces"
+    protocol: "http"
 
 vscode:
   extensions:
@@ -71,4 +77,10 @@ vscode:
     - ms-vscode.vscode-toml
     - rust-lang.rust-analyzer
 
-workspaceLocation: "my-onchain-bio/move" 
+workspaceLocation: "my-onchain-bio/move"
+
+# Environment variables for Movement development
+env:
+  MOVEMENT_NETWORK: "https://aptos.testnet.porto.movementlabs.xyz/v1"
+  MOVEMENT_FAUCET: "https://fund.testnet.porto.movementlabs.xyz"
+  RUST_BACKTRACE: "1" 
