@@ -72,10 +72,9 @@ ports:
 
 vscode:
   extensions:
-    - move.move-analyzer
-    - ms-vscode.vscode-json
-    - ms-vscode.vscode-toml
     - rust-lang.rust-analyzer
+    - ms-vscode.vscode-markdown
+    - ms-vscode.vscode-yaml
 
 workspaceLocation: "my-onchain-bio/move"
 
