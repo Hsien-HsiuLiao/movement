@@ -1,4 +1,7 @@
 # movement
+
+https://www.movementnetwork.xyz/whitepaper/movement-whitepaper_en.pdf
+
 https://docs.movementnetwork.xyz/devs/tutorials/build
 
 https://docs.movementnetwork.xyz/devs/movementcli
@@ -21,5 +24,15 @@ sudo cp target/debug/movement /usr/local/bin/
 
 https://docs.movementnetwork.xyz/devs/networkEndpoints
 
+
 RPC	https://full.testnet.movementinfra.xyz/v1
+
 Faucet endpoint	https://faucet.testnet.movementinfra.xyz/
+
+notes:
+documentation inconsistent, tutorial for onchain bio incomplete, needed to lookup commands, networks
+
+onchain bio tutorial - https://docs.movementnetwork.xyz/devs/tutorials/build
+
+https://developer.movementnetwork.xyz/learning-paths/basic-concepts/01-install-movement-cli
+-seems more complete
